@@ -1,0 +1,110 @@
+/* Popular Section */
+.popular-container {
+    padding: 50px 5%;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+/* Title */
+.popular-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Divider */
+.popular-divider {
+    width: 80px;
+    height: 3px;
+    background: #ff4500;
+    border: none;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+/* Grid Layout */
+.popular-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Individual Product */
+.popular-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.popular-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Product Image */
+.popular-item img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+/* Product Name */
+.popular-item p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Pricing Section */
+.items-price {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* New Price */
+.items-price-new {
+    color: red;
+}
+
+/* Old Price */
+.items-price-old {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* Buy Button */
+.buy-btn {
+    background: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.buy-btn:hover {
+    background: #e03d00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .popular-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .popular-grid {
+        grid-template-columns: 1fr;
+    }
+}

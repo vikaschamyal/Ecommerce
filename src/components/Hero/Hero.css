@@ -1,0 +1,114 @@
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    height: 80vh;
+    position: relative;
+}
+
+/* Left Side */
+.hero-left {
+    max-width: 50%;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.hero-title span {
+    color: #ff6b6b;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+.hero-subtitle span {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+.hero-btn {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: #e63946;
+}
+
+/* Extra Info */
+.hero-info {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+/* Right Side */
+.hero-right {
+    position: relative;
+    max-width: 50%;
+    text-align: center;
+}
+
+.hero-image {
+    width: 600px;
+    border-radius: 10px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.wave-animation {
+    width: 80px;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    animation: wave-move 2s infinite;
+}
+
+/* Animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes wave-move {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 50px 5%;
+    }
+
+    .hero-left, .hero-right {
+        max-width: 100%;
+    }
+
+    .hero-image {
+        width: 800px;
+    }
+}

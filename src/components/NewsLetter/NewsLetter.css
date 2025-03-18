@@ -1,0 +1,77 @@
+/* Newsletter Section */
+.newsletter {
+    background: #ff4500;
+    color: white;
+    padding: 50px 5%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 50px 0;
+}
+
+/* Content Wrapper */
+.newsletter-content {
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Title */
+.newsletter-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Description */
+.newsletter-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Form */
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Input Field */
+.newsletter-input {
+    width: 70%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Subscribe Button */
+.newsletter-btn {
+    background: white;
+    color: #ff4500;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.newsletter-btn:hover {
+    background: black;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .newsletter-input {
+        width: 100%;
+    }
+}

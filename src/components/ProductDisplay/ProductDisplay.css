@@ -1,0 +1,132 @@
+/* Product Card Layout */
+.product-card {
+    display: flex;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(238, 237, 237, 0.1);
+    padding: 50px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Product Image Section */
+.product-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 40%;
+}
+
+.product-image {
+    width: 100%;
+    max-width: 250px; /* Ensures a good fit */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Product Details Section */
+.product-details {
+    flex: 1;
+    text-align: left;
+    max-width: 50%;
+}
+
+.product-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #007bff;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.product-rating {
+    font-size: 16px;
+    color: #f4b400;
+    margin-top: 5px;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* Size Selection */
+.size-selection {
+    margin-top: 10px;
+}
+
+.size-selection p {
+    font-weight: bold;
+}
+
+.size-buttons {
+    display: flex;
+    gap: 10px;
+   
+}
+
+.size-buttons button {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background-color: #683e3e;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.size-buttons button:hover {
+    background-color: #ddd;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-image-container {
+        max-width: 100%;
+    }
+
+    .product-details {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .size-buttons {
+        justify-content: center;
+    }
+}
