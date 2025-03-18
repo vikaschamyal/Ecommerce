@@ -41,6 +41,7 @@ function App() {
         </Routes>
         <Footer/>
       </Router>
+      
     </AuthProvider>
   );
 }
