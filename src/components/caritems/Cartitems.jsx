@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import "./CartItems.css"; // Import CSS
+
 import { ShopContext } from "../../context/ShopContext";
 import { RxCross1 } from "react-icons/rx";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
