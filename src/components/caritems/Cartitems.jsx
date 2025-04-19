@@ -4,7 +4,7 @@ import { ShopContext } from "../../context/ShopContext";
 import { RxCross1 } from "react-icons/rx";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import axios from "axios"; // Import axios
-import "./Cartitems.css";
+import "./CartItems.css";
 
 const CartItems = () => {
   const { allProducts, cartItem, removefromcart } = useContext(ShopContext);
