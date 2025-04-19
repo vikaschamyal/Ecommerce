@@ -2,7 +2,9 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import allProducts from "../assets/all_product"; // Import your product data
 import Item from "../Items/Item"; // Reuse the Item component
-import "/Users/vikas/Documents/Ecom/frontend/src/pages/Css/Shopcategories.css"; // Reuse the same CSS
+import "../../pages/Css/Shopcategories.css";
+
+
 
 const SearchResults = () => {
     const location = useLocation();

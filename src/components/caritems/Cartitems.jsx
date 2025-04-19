@@ -3,6 +3,7 @@ import "./CartItems.css"; // Import CSS
 import { ShopContext } from "../../context/ShopContext";
 import { RxCross1 } from "react-icons/rx";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
+import axios from "axios"; // Import axios
 
 const CartItems = () => {
   const { allProducts, cartItem, removefromcart } = useContext(ShopContext);
@@ -13,9 +14,26 @@ const CartItems = () => {
     .reduce((acc, product) => acc + product.price * (cartItem[product.id] || 0), 0)
     .toFixed(2);
 
-  const handleCheckout = (event) => {
-    event.preventDefault(); // Prevent form submission refresh
-    navigate("/checkout-success", { state: { cartItem, totalPrice, allProducts } });
+  const handleCheckout = async (event) => {
+    event.preventDefault();
+
+    try {
+      const { data } = await axios.post("http://localhost:5001/create-checkout-session", {
+        items: Object.keys(cartItem)
+          .filter((productId) => cartItem[productId] > 0) // Ensure only added products are sent
+          .map((productId) => ({
+            name: allProducts.find((p) => p.id === Number(productId)).name,
+            price: allProducts.find((p) => p.id === Number(productId)).price,
+            quantity: cartItem[productId],
+          })),
+      });
+
+      // Redirect to Stripe checkout page
+      window.location.href = data.url;
+    } catch (error) {
+      console.error("Error creating checkout session:", error);
+      alert("Failed to initiate payment. Please try again.");
+    }
   };
 
   return (

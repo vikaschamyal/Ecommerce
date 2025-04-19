@@ -17,6 +17,7 @@ import women from './components/assets/women.jpg';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import CheckoutSuccess from './components/Checkoutsuccess/CheckoutSuccess';
+import FakePayment from './components/FakePayment/Fakepayment';
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
 
           <Route path="/checkout-success" element={<CheckoutSuccess />} />
           <Route path="/shops" element={<Shopcategories />} />
+
+          <Route path="/fake-payment" element={<FakePayment />} />
+
         </Routes>
         <Footer/>
       </Router>
