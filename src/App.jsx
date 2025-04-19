@@ -17,7 +17,7 @@ import women from './components/assets/women.jpg';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import CheckoutSuccess from './components/Checkoutsuccess/CheckoutSuccess';
-import FakePayment from './components/FakePayment/Fakepayment';
+import FakePayment from './components/FakePayment/FakePayment';
 
 function App() {
   return (
