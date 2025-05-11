@@ -4,12 +4,9 @@ import Shopcategories from './pages/Shopcategories';
 import SearchResults from './components/SearchResults/SearchResults';
 import Product from './pages/Product';
 import Cart from './pages/Cart';
-
-
 import Shops from './pages/Shops';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
-
 // Define the banners
 import kids from './components/assets/kids.jpg';
 import men from './components/assets/men.jpg';
@@ -17,7 +14,7 @@ import women from './components/assets/women.jpg';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import CheckoutSuccess from './components/Checkoutsuccess/CheckoutSuccess';
-import FakePayment from './components/FakePayment/FakePayment';
+import './App.css';
 
 function App() {
   return (
@@ -39,9 +36,6 @@ function App() {
 
           <Route path="/checkout-success" element={<CheckoutSuccess />} />
           <Route path="/shops" element={<Shopcategories />} />
-
-          <Route path="/fake-payment" element={<FakePayment />} />
-
         </Routes>
         <Footer/>
       </Router>

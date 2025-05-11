@@ -1,22 +1,21 @@
 const allProducts = [
   {
-      id: 1,
-      "name": "Smartphone",
-      "category": "Electronics",
-      "brand": "TechBrand",
-      "price": 699.99,
-      "discount": 10,
-      "stock": 50,
-      "rating": 4.5,
-      "image": "https://thegreytechnologies.in/cdn/shop/products/mini-smartphone-android-7.jpg?v=1701107216&width=990",
-      "description": "A high-end smartphone with an amazing camera and display.",
-      "reviews": [
-          {
-              "user": "John Doe",
-              "rating": 5,
-              "comment": "Great phone! Highly recommend."
-          }
-      ]
+    "id": 1,
+    "name": "Women's Summer Dress",
+    "category": "Women's Clothing",
+    "brand": "StyleTrend",
+    "price": 49.99,
+    "discount": 15,
+    "stock": 60,
+    "rating": 4.7,
+    "image": "https://image.made-in-china.com/2f0j00gpEbmNYGsirP/Wholesale-Women-s-Dresses-Sexy-Clothes-High-Waisted-Bow-Tie-Straps-Dress-Striped-Floral-Print-Summer-Beach-Dress-Women-Clothes-Ladies-Long-Dress-Girls-Dresses.webp",
+    "reviews": [
+      {
+        "user": "Anna Roberts",
+        "rating": 5,
+        "comment": "Perfect for summer outings!"
+      }
+    ]
   },
   {
       "id": 2,
@@ -266,20 +265,20 @@ const allProducts = [
   },
   {
     "id": 15,
-    "name": "Kid's Hoodie",
+    "name": "Boy's shorts",
     "category": "Kids' Clothing",
-    "brand": "MiniFashion",
-    "price": 39.99,
-    "discount": 8,
-    "stock": 70,
-    "rating": 4.6,
-    "image": "https://www.openwounds1915.com/wp-content/uploads/2020/02/Open-Wounds-1915-We-Are-Still-Here-Our-Wounds-Are-Still-Open-1915-Armenian-Genocide-Merchandise-ClothesT-shirts-Flags-Hoodies.openwounds_Kids-Hoodie1.jpg",
-    "description": "Warm and cozy hoodie for kids.",
+    "brand": "ActiveFeet",
+    "price": 55.99,
+    "discount": 10,
+    "stock": 50,
+    "rating": 4.5,
+    "image": "https://cdn.pixelspray.io/v2/black-bread-289bfa/XUefL6/wrkr/t.resize(h:1355,w:1080)/data/mothercare/19jan2024/410400771001_1.jpeg",
+    "description": "Durable sneakers for active kids.",
     "reviews": [
       {
-        "user": "Sarah Lee",
-        "rating": 5,
-        "comment": "My son loves it!"
+        "user": "Lucas Green",
+        "rating": 4.5,
+        "comment": "Great grip and comfort!"
       }
     ]
   },

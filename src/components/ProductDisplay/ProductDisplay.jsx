@@ -1,16 +1,29 @@
-import React, { useContext } from "react";
-import "./ProductDisplay.css"; // Import the CSS file
+import React, { useContext, useState } from "react";
+import "./ProductDisplay.css";
 import { ShopContext } from "../../context/ShopContext";
 
 const ProductDisplay = (props) => {
   const { product } = props;
+  const { addtoccart } = useContext(ShopContext);
 
+  const [selectedSize, setSelectedSize] = useState(null); // Track selected size
 
-  const {addtoccart } = useContext(ShopContext);
+  const handleSizeSelect = (size) => {
+    setSelectedSize(size);
+  };
+
+  const handleAddToCart = () => {
+    if (!selectedSize) {
+      alert("Please select a size before adding to cart.");
+      return;
+    }
+
+    // You can pass size info to context if needed
+    addtoccart(product.id);
+  };
 
   return (
     <section className="product-card">
-      {/* Right Side: Product Image */}
       <div className="product-image-container">
         <img
           src={product.image}
@@ -19,27 +32,30 @@ const ProductDisplay = (props) => {
         />
       </div>
 
-      {/* Left Side: Product Details */}
       <article className="product-details">
         <h2 className="product-name">{product.name}</h2>
         <p className="product-price">${product.price}</p>
         <p className="product-rating">⭐ {product.rating}</p>
-        <p>Category : {product.category}</p>
+        <p>Category: {product.category}</p>
         <p className="product-description">{product.description}</p>
-        
+
         {/* Size Selection */}
         <div className="size-selection">
           <p>Select Size:</p>
           <div className="size-buttons">
-            <button>S</button>
-            <button>M</button>
-            <button>L</button>
-            <button>XL</button>
+            {["S", "M", "L", "XL"].map((size) => (
+              <button
+                key={size}
+                className={selectedSize === size ? "selected" : ""}
+                onClick={() => handleSizeSelect(size)}
+              >
+                {size}
+              </button>
+            ))}
           </div>
         </div>
 
-        {/* Add to Cart Button */}
-        <button onClick={() => {addtoccart(product.id)}} className="add-to-cart-btn">
+        <button onClick={handleAddToCart} className="add-to-cart-btn">
           Add to Cart
         </button>
       </article>
