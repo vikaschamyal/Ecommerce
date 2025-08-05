@@ -1,19 +1,22 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
+
+import Shops from './pages/Shops';
 import Shopcategories from './pages/Shopcategories';
-import SearchResults from './components/SearchResults/SearchResults';
 import Product from './pages/Product';
 import Cart from './pages/Cart';
-import Shops from './pages/Shops';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import SearchResults from './components/SearchResults/SearchResults';
+import CheckoutSuccess from './components/Checkoutsuccess/CheckoutSuccess';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
-// Define the banners
+
+// Banners
 import kids from './components/assets/kids.jpg';
 import men from './components/assets/men.jpg';
 import women from './components/assets/women.jpg';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import CheckoutSuccess from './components/Checkoutsuccess/CheckoutSuccess';
+
 import './App.css';
 
 function App() {
@@ -21,25 +24,38 @@ function App() {
     <AuthProvider>
       <Router>
         <Navbar />
+
         <Routes>
+          {/* Home */}
           <Route path="/" element={<Shops />} />
+
+          {/* Categories */}
           <Route path="/mens" element={<Shopcategories banner={men} category="mens" />} />
           <Route path="/womens" element={<Shopcategories banner={women} category="womens" />} />
           <Route path="/kids" element={<Shopcategories banner={kids} category="kids" />} />
 
-          <Route path="/search" element={<SearchResults />} />
+          {/* Product Details */}
           <Route path="/product/:productId" element={<Product />} />
+
+          {/* Search */}
+          <Route path="/search" element={<SearchResults />} />
+
+          {/* Cart */}
           <Route path="/cart" element={<Cart />} />
-          <Route path="/login" element={<Login/>} />
 
-          <Route path="/signup" element={<Signup />}/>
+          {/* Auth */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
 
+          {/* Checkout */}
           <Route path="/checkout-success" element={<CheckoutSuccess />} />
-          <Route path="/shops" element={<Shopcategories />} />
+
+          {/* Optional: General Shopcategories fallback */}
+          {/* <Route path="/shops" element={<Shopcategories />} /> */}
         </Routes>
-        <Footer/>
+
+        <Footer />
       </Router>
-      
     </AuthProvider>
   );
 }

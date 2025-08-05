@@ -17,25 +17,7 @@ const allProducts = [
       }
     ]
   },
-  {
-      "id": 2,
-      "name": "Wireless Earbuds",
-      "category": "Electronics",
-      "brand": "SoundMax",
-      "price": 129.99,
-      "discount": 5,
-      "stock": 100,
-      "rating": 4.7,
-      "image": "https://www.yuvaflowers.com/cdn/shop/files/61q-2yzbBtL._SX522.jpg?v=1716103320",
-      "description": "Noise-canceling wireless earbuds with long battery life.",
-      "reviews": [
-          {
-              "user": "Jane Smith",
-              "rating": 4.5,
-              "comment": "Comfortable and great sound quality!"
-          }
-      ]
-  },
+  
   {
       id: 3,
       "name": "Men's Leather Jacket",
