@@ -101,7 +101,7 @@
     }
 }
 
-/* Extra Small Screens (Narrow Phones) */
+/* Extra Small Screens */
 @media (max-width: 480px) {
     .category-container {
         padding: 0.75rem;
