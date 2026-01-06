@@ -9,7 +9,7 @@ import './App.css';
 // Lazy load routes for better performance
 const Dashboard = lazy(() => import('./pages/Dashboard'));
 const Shops = lazy(() => import('./pages/Shops'));
-const ShopCategories = lazy(() => import('./pages/ShopCategories'));
+const ShopCategories = lazy(() => import('./pages/Shopcategories'));
 const SearchResults = lazy(() => import('./components/SearchResults/SearchResults'));
 const Product = lazy(() => import('./pages/Product'));
 const Cart = lazy(() => import('./pages/Cart'));
