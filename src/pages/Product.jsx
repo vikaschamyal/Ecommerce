@@ -6,17 +6,32 @@ import ProductDisplay from '../components/ProductDisplay/ProductDisplay';
 import Descriptionbox from '../components/Descriptionbox/Descriptionbox';
 
 const Product = () => {
-    const { allProducts } = useContext(ShopContext); // ✅ Fix variable name
+    const { allProducts } = useContext(ShopContext);
     const { productId } = useParams();
     
-    const product = allProducts.find((e) => e.id === Number(productId)); // ✅ Ensure productId is a number
+    const product = allProducts?.find((e) => e.id === Number(productId));
+
+    if (!allProducts || allProducts.length === 0) {
+        return (
+            <div className="loading-container">
+                <div className="spinner"></div>
+                <p>Loading product...</p>
+            </div>
+        );
+    }
 
     if (!product) {
-        return <p>Product not found</p>;
+        return (
+            <div className="product-not-found">
+                <h2>Product Not Found</h2>
+                <p>The product you're looking for doesn't exist or has been removed.</p>
+                <a href="/" className="back-to-home-btn">Return to Home</a>
+            </div>
+        );
     }
 
     return (
-        <div>
+        <div className="product-page">
             <Breadcrum product={product} />
             <ProductDisplay product={product}/>
             <Descriptionbox/>

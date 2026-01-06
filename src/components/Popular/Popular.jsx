@@ -5,7 +5,7 @@ import Item from '../Items/Item';
 
 const Popular = () => {
     return (
-        <div id="popular" className="popular-container"> {/* ✅ Added ID for scrolling */}
+        <div id="popular" className="popular-container trending-section">
             <h1>Popular Products</h1>
             <hr />
             <div className="popular-grid">

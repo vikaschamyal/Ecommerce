@@ -6,13 +6,14 @@ import { ShopContext } from "../context/ShopContext";
 const Shopcategories = (props) => {
     const { allProducts } = useContext(ShopContext);
 
-    // Debugging
-    console.log("All Products:", allProducts);
-    console.log("Category Prop:", props.category);
-
     // Ensure `allProducts` exists before filtering
     if (!allProducts || allProducts.length === 0) {
-        return <p>Loading products...</p>;
+        return (
+            <div className="loading-container">
+                <div className="spinner"></div>
+                <p>Loading products...</p>
+            </div>
+        );
     }
 
     // Map categories correctly
@@ -27,15 +28,13 @@ const Shopcategories = (props) => {
     // Filter products safely
     const filteredProducts = allProducts.filter(product => product.category === selectedCategory);
 
-    // Debugging
-    console.log("Selected Category:", selectedCategory);
-    console.log("Filtered Products:", filteredProducts);
-
     return (
-        <>
-            <div className="category-container">
-                <img src={props.banner} alt="Category Banner" className="category-banner" />
-            </div>
+        <div className="shop-category-page">
+            {props.banner && (
+                <div className="category-container">
+                    <img src={props.banner} alt={`${selectedCategory || 'Category'} Banner`} className="category-banner" />
+                </div>
+            )}
             <div className="products-grid">
                 {filteredProducts.length > 0 ? (
                     filteredProducts.map((item) => (
@@ -48,10 +47,10 @@ const Shopcategories = (props) => {
                         />
                     ))
                 ) : (
-                    <p>No products available in this category.</p>
+                    <p className="no-products">No products available in this category.</p>
                 )}
             </div>
-        </>
+        </div>
     );
 };
 

@@ -1,0 +1,230 @@
+/* Skeleton Loader Styles */
+.skeleton-product-card {
+  background: var(--bg-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+.skeleton-image {
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(
+    90deg,
+    var(--bg-gray) 0%,
+    var(--bg-light) 50%,
+    var(--bg-gray) 100%
+  );
+  background-size: 200% 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  animation: skeleton-shimmer 1.5s infinite;
+}
+
+.skeleton-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.skeleton-line {
+  height: 16px;
+  background: linear-gradient(
+    90deg,
+    var(--bg-gray) 0%,
+    var(--bg-light) 50%,
+    var(--bg-gray) 100%
+  );
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: skeleton-shimmer 1.5s infinite;
+}
+
+.skeleton-title {
+  width: 80%;
+  height: 20px;
+}
+
+.skeleton-price {
+  width: 40%;
+  height: 18px;
+}
+
+.skeleton-button {
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(
+    90deg,
+    var(--bg-gray) 0%,
+    var(--bg-light) 50%,
+    var(--bg-gray) 100%
+  );
+  background-size: 200% 100%;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  animation: skeleton-shimmer 1.5s infinite;
+}
+
+.skeleton-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Hero Skeleton */
+.skeleton-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  gap: 3rem;
+  background: linear-gradient(to right, var(--bg-light), var(--bg-gray));
+  min-height: 400px;
+}
+
+.skeleton-hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 50%;
+}
+
+.skeleton-hero-title {
+  width: 70%;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.skeleton-hero-subtitle {
+  width: 90%;
+  height: 24px;
+  border-radius: 4px;
+}
+
+.skeleton-hero-button {
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.skeleton-hero-image {
+  flex: 1;
+  max-width: 50%;
+  height: 400px;
+  background: linear-gradient(
+    90deg,
+    var(--bg-gray) 0%,
+    var(--bg-light) 50%,
+    var(--bg-gray) 100%
+  );
+  background-size: 200% 100%;
+  border-radius: 12px;
+  animation: skeleton-shimmer 1.5s infinite;
+}
+
+/* Cart Item Skeleton */
+.skeleton-cart-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.skeleton-cart-image {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(
+    90deg,
+    var(--bg-gray) 0%,
+    var(--bg-light) 50%,
+    var(--bg-gray) 100%
+  );
+  background-size: 200% 100%;
+  border-radius: 8px;
+  animation: skeleton-shimmer 1.5s infinite;
+}
+
+.skeleton-cart-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skeleton-cart-title {
+  width: 60%;
+  height: 18px;
+}
+
+.skeleton-cart-price {
+  width: 40%;
+  height: 16px;
+}
+
+/* Shimmer Animation */
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes skeleton-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Dark Mode Support */
+.dark .skeleton-product-card,
+.dark .skeleton-cart-item {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dark .skeleton-image,
+.dark .skeleton-line,
+.dark .skeleton-button,
+.dark .skeleton-hero-image,
+.dark .skeleton-cart-image {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  background-size: 200% 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skeleton-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .skeleton-hero {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .skeleton-hero-content,
+  .skeleton-hero-image {
+    max-width: 100%;
+  }
+
+  .skeleton-hero-image {
+    height: 250px;
+  }
+}
+
