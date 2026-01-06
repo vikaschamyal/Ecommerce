@@ -6,6 +6,7 @@
   flex-direction: column;
   gap: 2rem;
   min-height: calc(100vh - 200px);
+  
 }
 
 .cart-title {
@@ -35,7 +36,7 @@
   flex: 1;
   min-width: 350px;
   background: var(--bg-light);
-  padding: 1.5rem;
+  padding: 1.6rem;
   border-radius: 8px;
   box-shadow: var(--shadow);
   position: sticky;
