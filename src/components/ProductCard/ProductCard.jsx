@@ -67,3 +67,4 @@ const ProductCard = ({ product }) => {
 
 export default React.memo(ProductCard);
 
+

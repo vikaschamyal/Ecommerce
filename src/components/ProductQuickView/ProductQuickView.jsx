@@ -117,3 +117,4 @@ const ProductQuickView = ({ product, isOpen, onClose }) => {
 
 export default React.memo(ProductQuickView);
 
+

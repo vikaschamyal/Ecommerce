@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { ShopContext } from '../context/ShopContext';
 import { useParams } from 'react-router-dom';
-import Breadcrum from '../components/Breadcrums/Breadcrum';
+import Breadcrumb from '../components/Breadcrumbs/Breadcrumb';
 import ProductDisplay from '../components/ProductDisplay/ProductDisplay';
-import Descriptionbox from '../components/Descriptionbox/Descriptionbox';
+import DescriptionBox from '../components/DescriptionBox/DescriptionBox';
 
 const Product = () => {
     const { allProducts } = useContext(ShopContext);
@@ -32,9 +32,9 @@ const Product = () => {
 
     return (
         <div className="product-page">
-            <Breadcrum product={product} />
+            <Breadcrumb product={product} />
             <ProductDisplay product={product}/>
-            <Descriptionbox/>
+            <DescriptionBox/>
         </div>
     );
 };

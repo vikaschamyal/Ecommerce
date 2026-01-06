@@ -9,13 +9,13 @@ import './App.css';
 // Lazy load routes for better performance
 const Dashboard = lazy(() => import('./pages/Dashboard'));
 const Shops = lazy(() => import('./pages/Shops'));
-const Shopcategories = lazy(() => import('./pages/Shopcategories'));
+const ShopCategories = lazy(() => import('./pages/ShopCategories'));
 const SearchResults = lazy(() => import('./components/SearchResults/SearchResults'));
 const Product = lazy(() => import('./pages/Product'));
 const Cart = lazy(() => import('./pages/Cart'));
 const Login = lazy(() => import('./pages/Login'));
 const Signup = lazy(() => import('./pages/Signup'));
-const CheckoutSuccess = lazy(() => import('./components/Checkoutsuccess/CheckoutSuccess'));
+const CheckoutSuccess = lazy(() => import('./components/CheckoutSuccess/CheckoutSuccess'));
 const Wallet = lazy(() => import('./pages/Wallet'));
 const Account = lazy(() => import('./pages/Account'));
 
@@ -42,9 +42,9 @@ function App() {
               <Routes>
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/shops" element={<Shops />} />
-                <Route path="/mens" element={<Shopcategories banner={men} category="mens" />} />
-                <Route path="/womens" element={<Shopcategories banner={women} category="womens" />} />
-                <Route path="/kids" element={<Shopcategories banner={kids} category="kids" />} />
+                <Route path="/mens" element={<ShopCategories banner={men} category="mens" />} />
+                <Route path="/womens" element={<ShopCategories banner={women} category="womens" />} />
+                <Route path="/kids" element={<ShopCategories banner={kids} category="kids" />} />
                 <Route path="/search" element={<SearchResults />} />
                 <Route path="/product/:productId" element={<Product />} />
                 <Route path="/cart" element={<Cart />} />

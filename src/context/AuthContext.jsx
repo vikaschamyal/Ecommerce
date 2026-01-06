@@ -1,7 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 import axios from "axios";
 
-export const AuthContext = createContext(); // 👈 named export
+const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -24,7 +24,8 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem("jwtToken", res.data.token);
       setUser(res.data.user);
       return true;
-    } catch {
+    } catch (error) {
+      console.error("Login error:", error);
       return false;
     }
   };
@@ -36,7 +37,8 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem("jwtToken", res.data.token);
       setUser(res.data.user);
       return true;
-    } catch {
+    } catch (error) {
+      console.error("Signup error:", error);
       return false;
     }
   };
@@ -54,4 +56,5 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
-export default AuthContext; // optional, can keep or remove
+export { AuthContext };
+export default AuthContext;
