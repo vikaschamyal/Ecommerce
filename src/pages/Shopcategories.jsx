@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Item from "../components/Items/Item";
 import { ShopContext } from "../context/ShopContext";
 
-const ShopCategories = (props) => {
+const Shopcategories = (props) => {
     const { allProducts } = useContext(ShopContext);
 
     if (!allProducts || allProducts.length === 0) {
@@ -104,4 +104,4 @@ const ShopCategories = (props) => {
     );
 };
 
-export default ShopCategories;
+export default Shopcategories;
