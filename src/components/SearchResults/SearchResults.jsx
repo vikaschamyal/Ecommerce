@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import allProducts from "../assets/all_product"; // Import your product data
 import Item from "../Items/Item"; // Reuse the Item component
-import "../../styles/Shopcategories.css";// Reuse the same CSS
+import "../../styles/shopcategories.css";// Reuse the same CSS
 const SearchResults = () => {
     const location = useLocation();
     const query = new URLSearchParams(location.search).get("query");
