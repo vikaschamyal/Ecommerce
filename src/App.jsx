@@ -10,7 +10,7 @@ import './App.css';
 const Dashboard = lazy(() => import('./pages/Dashboard'));
 const Shops = lazy(() => import('./pages/Shops'));
 
-const Shopcategories = lazy(() => import('./pages/Shopcategories.jsx'));
+const ShopCategories = lazy(() => import('./pages/ShopCategories.jsx'));
 
 
 const SearchResults = lazy(() => import('./components/SearchResults/SearchResults'));
@@ -45,9 +45,9 @@ function App() {
               <Routes>
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/shops" element={<Shops />} />
-                <Route path="/mens" element={<Shopcategories banner={men} category="mens" />} />
-                <Route path="/womens" element={<Shopcategories banner={women} category="womens" />} />
-                <Route path="/kids" element={<Shopcategories banner={kids} category="kids" />} />
+                <Route path="/mens" element={<ShopCategories banner={men} category="mens" />} />
+                <Route path="/womens" element={<ShopCategories banner={women} category="womens" />} />
+                <Route path="/kids" element={<ShopCategories banner={kids} category="kids" />} />
                 <Route path="/search" element={<SearchResults />} />
                 <Route path="/product/:productId" element={<Product />} />
                 <Route path="/cart" element={<Cart />} />
