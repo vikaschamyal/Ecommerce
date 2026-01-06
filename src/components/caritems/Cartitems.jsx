@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./CartItems.css";
+import "./cartItems.css";
 import { ShopContext } from "../../context/ShopContext";
 import { RxCross1 } from "react-icons/rx";
 import { FaPlus, FaMinus } from "react-icons/fa";
