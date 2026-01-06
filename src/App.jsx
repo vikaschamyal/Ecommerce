@@ -10,7 +10,7 @@ import './App.css';
 const Dashboard = lazy(() => import('./pages/Dashboard'));
 const Shops = lazy(() => import('./pages/Shops'));
 
-const ShopCategories = lazy(() => import('./pages/ShopCategories'));
+const ShopCategories = lazy(() => import('./pages/ShopCategories.jsx'));
 
 
 const SearchResults = lazy(() => import('./components/SearchResults/SearchResults'));
