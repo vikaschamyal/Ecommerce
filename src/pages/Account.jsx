@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { AuthContext } from '../context/AuthContext';
+import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from 'react-router-dom';
 import { MdAccountCircle, MdLogout } from 'react-icons/md';
 import './Account.css';

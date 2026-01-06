@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
 import Item from "../components/Items/Item";
-import "./css/Shopcategories.css";
+
+import "../styles/shopcategories.css";
+
+
 import { ShopContext } from "../context/ShopContext";
 
 const Shopcategories = (props) => {
