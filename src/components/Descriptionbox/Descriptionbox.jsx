@@ -1,6 +1,6 @@
 import React from "react";
 
-const DescriptionBox = () => {
+const Descriptionbox = () => {
   const styles = {
     container: {
       padding: "2rem 1rem",
@@ -59,4 +59,4 @@ const DescriptionBox = () => {
   );
 };
 
-export default DescriptionBox;
+export default Descriptionbox;
