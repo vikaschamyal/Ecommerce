@@ -52,7 +52,7 @@ const DescriptionBox = () => {
           <br />
           🛒 End-of-Season Sales – Clearance sales for winter, summer, fall, and spring collections.
           <br />
-          🛒 New Year Sales – Best deals on formal and casual wear.
+          🛒 New Year Sales – Best deals on formal and casual wear...
         </p>
       </div>
     </div>
